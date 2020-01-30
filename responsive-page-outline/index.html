@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page layout example 01</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  
+  <header>
+    <div><a href="#" class="logo"><img src="https://github.com/MEDS2007/lecture03/raw/master/images/github-teacher.png" alt="logo"></a>
+    <h1>WEBSITE</h1>
+    </div>
+    <a href="#" class="mobile-menu-icon" id="menuIcon">☰</a>
+  </header>
+  
+  <nav id="menu">
+    <a href="#">stuff</a>
+    <a href="#">other</a>
+    <a href="#">hello</a>
+  </nav>
+  
+  <main>
+    <h2>Section title</h2>
+    <p>Main content here</p>
+  </main>
+  
+  <footer>
+    © Lecturers. Caring since ages ago.
+  </footer>
+  
+  <!-- JavaScript needs to go just before the closing body tag -->
+  <script>
+    
+    const toggle = () => {
+      menu.classList.toggle("show-menu");
+    }
+    
+    menuIcon.addEventListener("click", toggle);
+    
+  </script>
+</body>
+</html>

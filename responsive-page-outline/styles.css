@@ -1,0 +1,144 @@
+html {
+  --light-colour: rgba(255, 255, 255, .9);
+  --pale-colour: #aaa;
+  --mid-colour: #666;
+  --dark-colour: #333;
+  --lightBorder: 2px solid var(--light-colour);
+  --highlight: #dfd;
+  --highlightDark: #575
+}
+
+body {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.25rem;
+}
+
+header {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background: var(--pale-colour);
+  z-index: 100;
+}
+header div {
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  display: inline-block;
+  margin: 0 6px;
+}
+header a {
+  text-decoration: none;
+  color: var(--dark-colour);
+}
+.logo img {
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--light-colour);
+  padding: 2px;
+}
+.mobile-menu-icon {
+  font-size: 2em;
+  padding-top: 5px;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  transform: translateY(-20em);
+  background: rgba(85, 85, 85, .9);
+  flex-direction: column;
+  transition: all .5s;
+}
+nav a {
+  padding: 1.25em 1.5em;
+  color: var(--pale-colour);
+  text-decoration: none;
+  border-bottom: var(--lightBorder);
+}
+nav a:last-child {
+  border-bottom: 0;
+}
+nav a:first-child {
+  border-top: var(--lightBorder);
+}
+nav a {
+  padding: .75em 4px;
+  background: var(--dark-colour);
+  text-decoration: none;
+  color: var(--light-colour);
+  text-align: center;
+  border-bottom: 2px solid var(--pale-colour);
+}
+.show-menu {
+  transform: translateY(0);
+  transition: all 1s;
+}
+
+main {
+  padding: .75em 10px;
+  box-sizing: border-box;
+}
+main h2 {
+  margin: 0;
+  color: var(--mid-colour);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: .75em;;
+  line-height: 1.75em;
+  text-align: center;
+  background: var(--pale-colour);
+}
+
+@media screen and (min-width: 600px) {
+  /* override mobile styles screens > 599px */
+  .showhide { display: flex; }
+  .mobile-menu-icon { display: none; }
+  nav {
+    position: relative;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  nav a {
+    text-align: center;
+    padding: .75em 2em;
+    border: 0;
+    border-left: 2px solid var(--pale-colour);
+    transition: all 1s;
+  }
+  nav a:first-child {
+    border: 0;
+  }
+  nav a:hover {
+    color: var(--highlight);
+    background: var(--highlightDark);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* override previous styles for screens > 1199px */
+  body {
+    background: var(--dark-colour);
+  }
+  main {
+    background: var(--light-colour);
+    padding: 1em 24px;
+    max-width: 800px;
+    margin: 0 auto;
+    height: calc(100vh - 168px);
+  }
+}
