@@ -1,0 +1,113 @@
+body {
+  background: #fff;
+  font-family: sans-serif;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+header, main {
+  border-bottom: 1px solid #eee;
+}
+header img {
+  width: 80px;
+}
+header h1 {
+  font-size: 3em;
+  margin: .25em 0 0;
+  font-weight: normal;
+}
+h2 {
+  font-weight: normal;
+  margin-top: 0;
+}
+header h2 {
+  color: #ccc;
+  font-size: 1.2em;
+}
+h2 em {
+  color: pink;
+  font-style: normal;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  font-size: .75em;
+  margin: 1.25em 1em 0 0;
+}
+nav a {
+  text-decoration: none;
+  color: #5badf0;
+  padding: 0 15px;
+  line-height: 2.5em;
+}
+.butt {
+  background-color: #5badf0;
+  color: white;
+  border-radius: 7%;
+  padding: 0 14px;
+  margin-left: 14px;
+}
+
+main {
+  width: 98%;
+  margin: 0 auto;
+  padding: 4em 0;
+  color: #333;
+}
+
+section {
+  padding: 1.5em 0;
+  margin-bottom: 0em;
+}
+section h2 {
+  font-size: 1.2em;
+}
+header img,
+section img {
+  border-radius: 50%;
+}
+/* a simple float will do for the image... */
+section img {
+  float: left;
+  margin-right: 1.5em;
+  margin-bottom: 4em;
+}
+section p {
+  margin: 0;
+  line-height: 1.75em;
+}
+p a {
+  color: #4576c0
+}
+
+footer {
+  clear: both;
+  padding: .5em 0;
+  color: gray;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: left;
+  font-size: .75em;
+}
+
+/* basic breakpoint for above-mobile styles */
+@media only screen and (min-width: 640px) {
+  main {
+    width: 80%;
+    max-width: 510px;
+    padding: 4em 0;
+  }
+  section {
+    margin-bottom: 2.25em;
+  }
+  footer {
+    max-width: 510px;
+    padding: 2em 0;
+  }
+}
